@@ -1,0 +1,231 @@
+{
+  "keys": "/Users/sunwf/node/btcbot/config/config.default.js",
+  "onerror": {
+    "errorPageUrl": "/Users/sunwf/node/btcbot/node_modules/_egg-onerror@1.4.6@egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/sunwf/node/btcbot/node_modules/_egg-onerror@1.4.6@egg-onerror/config/config.default.js"
+  },
+  "session": {
+    "maxAge": "/Users/sunwf/node/btcbot/node_modules/_egg-session@2.1.1@egg-session/config/config.default.js",
+    "key": "/Users/sunwf/node/btcbot/node_modules/_egg-session@2.1.1@egg-session/config/config.default.js",
+    "httpOnly": "/Users/sunwf/node/btcbot/node_modules/_egg-session@2.1.1@egg-session/config/config.default.js",
+    "encrypt": "/Users/sunwf/node/btcbot/node_modules/_egg-session@2.1.1@egg-session/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/sunwf/node/btcbot/node_modules/_egg-i18n@1.1.1@egg-i18n/config/config.default.js",
+    "dirs": "/Users/sunwf/node/btcbot/node_modules/_egg-i18n@1.1.1@egg-i18n/config/config.default.js",
+    "queryField": "/Users/sunwf/node/btcbot/node_modules/_egg-i18n@1.1.1@egg-i18n/config/config.default.js",
+    "cookieField": "/Users/sunwf/node/btcbot/node_modules/_egg-i18n@1.1.1@egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/sunwf/node/btcbot/node_modules/_egg-i18n@1.1.1@egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/sunwf/node/btcbot/node_modules/_egg-watcher@2.1.3@egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/Users/sunwf/node/btcbot/node_modules/_egg-watcher@2.1.3@egg-watcher/config/config.default.js",
+      "development": "/Users/sunwf/node/btcbot/node_modules/_egg-watcher@2.1.3@egg-watcher/config/config.default.js"
+    }
+  },
+  "multipart": {
+    "autoFields": "/Users/sunwf/node/btcbot/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/sunwf/node/btcbot/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/sunwf/node/btcbot/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/sunwf/node/btcbot/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "fields": "/Users/sunwf/node/btcbot/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "fileSize": "/Users/sunwf/node/btcbot/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "files": "/Users/sunwf/node/btcbot/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/sunwf/node/btcbot/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "whitelist": "/Users/sunwf/node/btcbot/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+    "csrf": {
+      "enable": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "useSession": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "cookieName": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "sessionName": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "headerName": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "bodyName": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "queryName": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js"
+    },
+    "xframe": {
+      "enable": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "value": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.local.js",
+      "maxAge": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "value": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js",
+      "policy": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "/Users/sunwf/node/btcbot/node_modules/_egg-security@1.11.0@egg-security/config/config.default.js"
+  },
+  "development": {
+    "watchDirs": "/Users/sunwf/node/btcbot/node_modules/_egg-development@1.3.1@egg-development/config/config.default.js",
+    "ignoreDirs": "/Users/sunwf/node/btcbot/node_modules/_egg-development@1.3.1@egg-development/config/config.default.js",
+    "fastReady": "/Users/sunwf/node/btcbot/node_modules/_egg-development@1.3.1@egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/sunwf/node/btcbot/node_modules/_egg-development@1.3.1@egg-development/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/sunwf/node/btcbot/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/sunwf/node/btcbot/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/sunwf/node/btcbot/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/sunwf/node/btcbot/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/sunwf/node/btcbot/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/sunwf/node/btcbot/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/sunwf/node/btcbot/node_modules/_egg-static@1.4.1@egg-static/config/config.default.js",
+    "dir": "/Users/sunwf/node/btcbot/node_modules/_egg-static@1.4.1@egg-static/config/config.default.js",
+    "dynamic": "/Users/sunwf/node/btcbot/node_modules/_egg-static@1.4.1@egg-static/config/config.default.js",
+    "preload": "/Users/sunwf/node/btcbot/node_modules/_egg-static@1.4.1@egg-static/config/config.default.js",
+    "buffer": "/Users/sunwf/node/btcbot/node_modules/_egg-static@1.4.1@egg-static/config/config.default.js",
+    "maxFiles": "/Users/sunwf/node/btcbot/node_modules/_egg-static@1.4.1@egg-static/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/sunwf/node/btcbot/node_modules/_egg-jsonp@1.1.1@egg-jsonp/config/config.default.js",
+    "callback": "/Users/sunwf/node/btcbot/node_modules/_egg-jsonp@1.1.1@egg-jsonp/config/config.default.js",
+    "csrf": "/Users/sunwf/node/btcbot/node_modules/_egg-jsonp@1.1.1@egg-jsonp/config/config.default.js"
+  },
+  "view": {
+    "root": "/Users/sunwf/node/btcbot/node_modules/_egg-view@1.1.1@egg-view/config/config.default.js",
+    "cache": "/Users/sunwf/node/btcbot/node_modules/_egg-view@1.1.1@egg-view/config/config.local.js",
+    "defaultExtension": "/Users/sunwf/node/btcbot/node_modules/_egg-view@1.1.1@egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/sunwf/node/btcbot/node_modules/_egg-view@1.1.1@egg-view/config/config.default.js",
+    "mapping": "/Users/sunwf/node/btcbot/node_modules/_egg-view@1.1.1@egg-view/config/config.default.js"
+  },
+  "env": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+  "name": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+  "proxy": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+  "protocolHeaders": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+  "ipHeaders": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+  "hostHeaders": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "version": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "description": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "private": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "dependencies": {
+      "egg": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "lodash": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "qrcode-terminal": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "request": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "request-promise": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "wechaty": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "autod": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "autod-egg": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "egg-bin": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "egg-ci": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "egg-mock": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "eslint": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "eslint-config-egg": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "webstorm-disable-index": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "dev": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "test": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "test-local": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "cov": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "lint": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "ci": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "autod": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "url": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+    },
+    "author": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "license": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+  },
+  "baseDir": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+  "HOME": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+  "rundir": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "notFound": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "sitefile": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "middlewares": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "httpClient": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "encoding": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "formLimit": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "jsonLimit": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "strict": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "depth": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+      "parameterLimit": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+    }
+  },
+  "logger": {
+    "dir": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "encoding": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "env": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "level": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "consoleLevel": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "outputJSON": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "buffer": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "appLogName": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "coreLogName": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "agentLogName": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "errorLogName": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.local.js"
+    }
+  },
+  "httpclient": {
+    "keepAlive": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "freeSocketKeepAliveTimeout": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "timeout": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "maxSockets": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "maxFreeSockets": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "enableDNSCache": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+    "dnsCacheMaxAge": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js",
+  "workerStartTimeout": "/Users/sunwf/node/btcbot/node_modules/_egg@1.6.0@egg/config/config.default.js"
+}
