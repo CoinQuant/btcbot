@@ -1,4 +1,7 @@
-const { Wechaty } = require('wechaty');
+const { Wechaty, Room } = require('wechaty');
+const Crawler = require('crawler');
+
+const News = require('./service/news');
 const qrcode = require('qrcode-terminal');
 const _ = require('lodash');
 
@@ -8,6 +11,26 @@ module.exports = app => {
   app.beforeStart(async () => {
     app.market = new Market();
     app.coins = await app.market.coins();
+    app.crawler = new Crawler({
+      maxConnection: 10,
+      rateLimit: 1500
+    });
+
+    const news = new News(app.crawler);
+
+    news.on('data', async data => {
+      const content = '';
+      r = await Room.find({ topic: '区块链研究技术群' });
+
+      for (let i = 0; i < data.length; i++) {
+        await r.say(data[i].title + '\n' + data[i].url);
+      }
+    });
+
+    // start get news
+    setTimeout(async () => {
+      await news.start();
+    }, 10000);
   });
 
   Wechaty.instance()

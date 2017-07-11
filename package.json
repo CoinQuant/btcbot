@@ -4,6 +4,7 @@
   "description": "collect news for btc price and news",
   "private": true,
   "dependencies": {
+    "crawler": "^1.0.5",
     "egg": "^1.6.0",
     "lodash": "^4.17.4",
     "qrcode-terminal": "^0.11.0",
