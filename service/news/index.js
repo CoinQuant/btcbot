@@ -13,9 +13,10 @@ module.exports = class News extends EventEmitter {
 
   get current() {
     return {
-      jubi: 2702,
+      jubi: 2709,
       huobi: 619,
-      okcoin: 412
+      okcoin: 414,
+      szzc: 1493636805000
     };
   }
 
@@ -31,7 +32,7 @@ module.exports = class News extends EventEmitter {
       const newsAndNotice = new NN(this._crawler);
 
       try {
-        newsAndNotice.start(this.current[pfs[i]]);
+        await newsAndNotice.start(this.current[pfs[i]]);
         newsAndNotice.on('data', async data => {
           this.emit('data', data);
         });
