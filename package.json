@@ -7,6 +7,7 @@
     "crawler": "^1.0.5",
     "egg": "^1.6.0",
     "lodash": "^4.17.4",
+    "node-yunbi": "^0.1.0",
     "qrcode-terminal": "^0.11.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
