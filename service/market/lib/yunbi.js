@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const Yunbi = require('node-yunbi');
+const Yunbi = require('node-yunbi')();
 
 module.exports = class YunbiSdk {
   async coins() {
@@ -15,6 +15,6 @@ module.exports = class YunbiSdk {
 
   async tricker(id) {
     const result = await Yunbi.getTicker(id);
-    return _.get(priceInfo, 'ticker.last');
+    return _.get(result, 'ticker.last');
   }
 };
