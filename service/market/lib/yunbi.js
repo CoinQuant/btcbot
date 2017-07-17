@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const Yunbi = require('node-yunbi');
+const Yunbi = require('node-yunbi')();
 
 module.exports = class YunbiSdk {
   async coins() {
