@@ -1,18 +1,9 @@
 const _ = require('lodash');
-const rp = require('request-promise');
+const Yunbi = require('node-yunbi');
 
 module.exports = class YunbiSdk {
-  constructor(accessKey) {
-    this._preUrl = 'https://yunbi.com';
-    this._accessKey = accessKey;
-  }
-
   async coins() {
-    let coinsResult = await rp(this._preUrl + '/api/v2/markets.json');
-
-    if ('string' === typeof coinsResult) {
-      coinsResult = JSON.parse(coinsResult);
-    }
+    let coinsResult = await Yunbi.getMarkets();
 
     const coinList = [];
     _.each(coinsResult, coin => {
@@ -23,9 +14,7 @@ module.exports = class YunbiSdk {
   }
 
   async tricker(id) {
-    const result = await rp(this._preUrl + `/api/v2/tickers/${id}.json`);
-    const priceInfo = JSON.parse(result);
-
+    const result = await Yunbi.getTicker(id);
     return _.get(priceInfo, 'ticker.last');
   }
 };
