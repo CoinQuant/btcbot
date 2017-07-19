@@ -1,16 +1,18 @@
+'use strict';
+
+const _ = require('lodash');
 const { Wechaty, Room } = require('wechaty');
 const Crawler = require('crawler');
+const qrcode = require('qrcode-terminal');
 
 const News = require('./service/news');
-const qrcode = require('qrcode-terminal');
-const _ = require('lodash');
-
-const Market = require('./service/market');
+const Market = require('markets');
 
 module.exports = app => {
   app.beforeStart(async () => {
     app.market = new Market();
     app.coins = await app.market.coins();
+
     app.crawler = new Crawler({
       maxConnection: 10,
       rateLimit: 1500
@@ -20,7 +22,9 @@ module.exports = app => {
 
     news.on('data', async data => {
       const content = '';
-      r = await Room.find({ topic: '区块链研究技术群' });
+      const r = await Room.find({ topic: '区块链研究技术群' });
+
+      if (!r) return;
 
       for (let i = 0; i < data.length; i++) {
         await r.say(data[i].title + '\n' + data[i].url);
@@ -34,44 +38,35 @@ module.exports = app => {
   });
 
   Wechaty.instance()
-    .on('scan', async function(url, code) {
+    .on('scan', async function (url, code) {
       const loginUrl = url.replace(/\/qrcode\//, '/l/');
       await qrcode.generate(loginUrl);
     })
     .on('login', user => {
-      console.log(`${user.name()} logged in`);
+      app.logger.info(`WeChat: ${user.name()} logged in`);
     })
-    .on('message', async function(message) {
-      if (message.self()) {
-        return;
-      }
+    .on('message', async function (message) {
+      if (message.self()) return;
 
       const room = message.room();
       if (!room) return;
 
       const topic = room.topic();
 
-      if (topic.indexOf('区块链') >= 0) {
-        const platforms = [];
+      if (!_.includes(topic, '区块链')) return;
 
-        _.each(app.coins, (v, k) => {
-          if (
-            _.indexOf(
-              v,
-              message.content().toLowerCase() +
-                app.market.platforms[k]['suffix']
-            ) >= 0
-          ) {
-            platforms.push(k);
-          }
-        });
+      const platforms = [];
+      const symbol = message.content().toLowerCase();
 
-        if (platforms.length > 0) {
-          message.say(
-            await app.market.tricker(message.content().toLowerCase(), platforms)
-          );
+      _.each(app.coins, (v, k) => {
+        let suffix = app.market.platforms[k]['suffix'];
+        if (_.includes(v, `${symbol}${suffix}`)) {
+          platforms.push(k);
         }
-      }
+      });
+
+      if (0 === platforms.length) return;
+      message.say(await app.market.ticker(symbol, platforms));
     })
     .on('error', error => {
       app.logger.error(error.message);

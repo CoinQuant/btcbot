@@ -1,21 +1,19 @@
 {
   "name": "btcbot",
   "version": "1.0.0",
-  "description": "collect news for btc price and news",
+  "description": "Collect information for btc price and news",
   "private": true,
   "dependencies": {
     "crawler": "^1.0.5",
     "egg": "^1.6.0",
     "lodash": "^4.17.4",
-    "node-yunbi": "^0.1.0",
+    "markets": "git+https://github.com/SuperDBJ/markets.git",
     "qrcode-terminal": "^0.11.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
     "wechaty": "^0.8.129"
   },
   "devDependencies": {
-    "autod": "^2.8.0",
-    "autod-egg": "^1.0.0",
     "egg-bin": "^3.4.0",
     "egg-ci": "^1.6.0",
     "egg-mock": "^3.7.0",
@@ -24,7 +22,7 @@
     "webstorm-disable-index": "^1.2.0"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "scripts": {
     "start": "node index.js",
@@ -32,12 +30,7 @@
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
-    "lint": "eslint .",
-    "ci": "npm run lint && npm run cov",
-    "autod": "autod"
-  },
-  "ci": {
-    "version": "6, 8"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
