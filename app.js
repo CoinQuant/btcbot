@@ -56,9 +56,9 @@ module.exports = app => {
       if (!_.includes(topic, '区块链')) return;
 
       const platforms = [];
+      const symbol = message.content().toLowerCase();
 
       _.each(app.coins, (v, k) => {
-        let symbol = message.content().toLowerCase();
         let suffix = app.market.platforms[k]['suffix'];
         if (_.includes(v, `${symbol}${suffix}`)) {
           platforms.push(k);

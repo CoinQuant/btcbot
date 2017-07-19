@@ -1,3 +1,5 @@
+'use strict';
+
 const EventEmitter = require('events');
 const _ = require('lodash');
 
@@ -28,15 +30,18 @@ module.exports = class News extends EventEmitter {
     const pfs = _.keys(this.current);
 
     for (let i = 0; i < pfs.length; i++) {
-      const NN = require(`./lib/${pfs[i]}.js`);
+      const platform_ = pfs[i];
+      const NN = require(`./lib/${platform_}.js`);
       const newsAndNotice = new NN(this._crawler);
 
       try {
-        await newsAndNotice.start(this.current[pfs[i]]);
+        await newsAndNotice.start(this.current[platform_]);
         newsAndNotice.on('data', async data => {
           this.emit('data', data);
         });
-      } catch (e) {}
+      } catch (e) {
+        this.emit('error', e);
+      }
     }
   }
 };
