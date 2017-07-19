@@ -40,7 +40,6 @@ module.exports = class News extends EventEmitter {
           this.emit('data', data);
         });
       } catch (e) {
-        this.emit('error', e);
       }
     }
   }
