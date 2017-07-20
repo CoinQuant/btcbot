@@ -46,7 +46,9 @@ module.exports = app => {
       app.logger.info(`WeChat: ${user.name()} logged in`);
     })
     .on('message', async function (message) {
-      if (message.self()) return;
+      const symbol = message.content().toLowerCase();
+
+      if (message.self() && (IS_PROD() || (!IS_PROD() && symbol.length >= 5))) return;
 
       const room = message.room();
       if (!room) return;
@@ -56,7 +58,6 @@ module.exports = app => {
       if (!_.includes(topic, '区块链')) return;
 
       const platforms = [];
-      const symbol = message.content().toLowerCase();
 
       _.each(app.coins, (v, k) => {
         let suffix = app.market.platforms[k]['suffix'];
@@ -73,3 +74,7 @@ module.exports = app => {
     })
     .init();
 };
+
+function IS_PROD() {
+  return process.env.EGG_SERVER_ENV === 'prod';
+}
