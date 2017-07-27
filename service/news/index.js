@@ -18,7 +18,8 @@ module.exports = class News extends EventEmitter {
       jubi: 2709,
       huobi: 619,
       okcoin: 414,
-      szzc: 1493636805000
+      szzc: 1493636805000,
+      jinse: 0,
     };
   }
 
@@ -39,8 +40,7 @@ module.exports = class News extends EventEmitter {
         newsAndNotice.on('data', async data => {
           this.emit('data', data);
         });
-      } catch (e) {
-      }
+      } catch (e) {}
     }
   }
 };

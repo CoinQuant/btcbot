@@ -28,7 +28,7 @@ module.exports = class JubiNews extends EventEmitter {
                 notices.push({
                   title: data[i].subject,
                   time: data[i].publication_date,
-                  url: this._preUrl + '/#!/news/' + data[i].id
+                  url: this._preUrl + '/#!/news/' + data[i].id,
                 });
               }
             }
@@ -37,8 +37,8 @@ module.exports = class JubiNews extends EventEmitter {
           this.emit('data', notices);
 
           done();
-        }
-      }
+        },
+      },
     ]);
   }
 };
