@@ -5,7 +5,7 @@ const { Wechaty, Room } = require('wechaty');
 const Crawler = require('crawler');
 const qrcode = require('qrcode-terminal');
 
-const News = require('./service/news');
+const News = require('coin-news');
 const Market = require('markets');
 
 module.exports = app => {
@@ -38,17 +38,18 @@ module.exports = app => {
   });
 
   Wechaty.instance()
-    .on('scan', async function (url, code) {
+    .on('scan', async function(url, code) {
       const loginUrl = url.replace(/\/qrcode\//, '/l/');
       await qrcode.generate(loginUrl);
     })
     .on('login', user => {
       app.logger.info(`WeChat: ${user.name()} logged in`);
     })
-    .on('message', async function (message) {
+    .on('message', async function(message) {
       const symbol = message.content().toLowerCase();
 
-      if (message.self() && (IS_PROD() || (!IS_PROD() && symbol.length >= 5))) return;
+      if (message.self() && (IS_PROD() || (!IS_PROD() && symbol.length >= 5)))
+        return;
 
       const room = message.room();
       if (!room) return;
