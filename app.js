@@ -24,7 +24,7 @@ module.exports = app => {
       const content = '';
       const r = await Room.find({ topic: '区块链研究技术群' });
 
-      if (!r) return;
+      if (!r || !data) return;
 
       for (let i = 0; i < data.length; i++) {
         await r.say(data[i].title + '\n' + data[i].url);
@@ -34,7 +34,7 @@ module.exports = app => {
     // start get news
     setTimeout(async () => {
       await news.start();
-    }, 10000);
+    }, 120000);
   });
 
   Wechaty.instance()
