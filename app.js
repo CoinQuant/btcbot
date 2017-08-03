@@ -21,20 +21,30 @@ module.exports = app => {
     const news = new News(app.crawler);
 
     news.on('data', async data => {
+      if (!data) {
+        return;
+      }
+
       const content = '';
-      const r = await Room.find({ topic: '区块链研究技术群' });
+      const topics = ['区块链研究技术群', '国际区块链韭菜俱乐部'];
 
-      if (!r || !data) return;
+      for (let j = 0; j < topics.length; j++) {
+        const r = await Room.find({ topic: topics[j] });
 
-      for (let i = 0; i < data.length; i++) {
-        await r.say(data[i].title + '\n' + data[i].url);
+        if (!r) {
+          return;
+        }
+
+        for (let i = 0; i < data.length; i++) {
+          await r.say(data[i].title + '\n' + data[i].url);
+        }
       }
     });
 
     // start get news
     setTimeout(async () => {
       await news.start();
-    }, 120000);
+    }, 10000);
   });
 
   Wechaty.instance()
