@@ -1,6 +1,6 @@
 {
   "name": "btcbot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collect information for btc price and news",
   "private": true,
   "dependencies": {
