@@ -43,8 +43,10 @@ module.exports = app => {
 
     // start get news
     setTimeout(async () => {
-      await news.start();
-    }, 10000);
+      setInterval(async () => {
+        await news.start();
+      }, 60000);
+    }, 120000);
   });
 
   Wechaty.instance()
